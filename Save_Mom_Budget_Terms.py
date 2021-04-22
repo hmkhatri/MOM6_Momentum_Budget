@@ -8,12 +8,14 @@ import xarray as xr
 import numpy as np
 from xgcm import Grid
 import glob
+import dask.distributed
 from dask.distributed import Client
 from dask.distributed import LocalCluster
-cluster = LocalCluster()
-client = Client(cluster)
 
-print(client)
+#if __name__ == '__main__':
+#    cluster = LocalCluster()
+#    client = Client(cluster)
+#    print(client)
 
 # Define relevant variables to save
 get_var = ['hf_CAu_2d', 'hf_CAv_2d', 'hf_PFu_2d', 'hf_PFv_2d', 'hf_diffu_2d', 'hf_diffv_2d', 'hf_du_dt_visc_2d', \
@@ -51,10 +53,10 @@ path_grid = "/archive/Raphael.Dussin/FMS2019.01.03_devgfdl_20210308/CM4_piContro
 ds_grid = xr.open_dataset(path_grid + "ocean_monthly.static.nc")
 
 # Loop for reading data and saving 5-yr averages
-for i in range(0, 16):  #len(filelist)):
+for i in range(10, 16):  #len(filelist)):
 
     tim_yr = filelist[i][-28:-15]
-    Print("Year Running = ", tim_yr)
+    print("Year Running = ", tim_yr)
 
     # First extract momentum budget terms
     filename = "ocean_monthly." + tim_yr + "*.nc"
