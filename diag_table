@@ -1,0 +1,83 @@
+# MOM6 ocean diagnostics file
+
+"ocean_monthly",             1, "months", 1, "days", "time"
+"ocean_monthly_snap",        1, "months", 1, "days", "time"
+
+# =========== Snapshots ======================= #
+"ocean_model",   "zos", "zos",  "ocean_daily_snap",  "all", .false., "none",1
+
+# =========== Vorticity budget diagnostics (mean monthly) =======================
+
+"ocean_model", "hf_dudt_2d", "hf_dudt_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_dvdt_2d", "hf_dvdt_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "ubt_dt", "ubt_dt", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "vbt_dt", "vbt_dt", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_PFu_2d", "hf_PFu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_PFv_2d", "hf_PFv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_CAu_2d", "hf_CAu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_CAv_2d", "hf_CAv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_diffu_2d", "hf_diffu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_diffv_2d", "hf_diffv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_du_dt_visc_2d", "hf_du_dt_visc_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_dv_dt_visc_2d", "hf_dv_dt_visc_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_gKEu_2d", "hf_gKEu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_gKEv_2d", "hf_gKEv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_rvxu_2d", "hf_rvxu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_rvxv_2d", "hf_rvxv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_u_BT_accel_2d", "hf_u_BT_accel_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "hf_v_BT_accel_2d", "hf_v_BT_accel_2d", "ocean_monthly", "all", "mean", "none",1
+
+"ocean_model", "intz_PFu_2d", "intz_PFu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_PFv_2d", "intz_PFv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_CAu_2d", "intz_CAu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_CAv_2d", "intz_CAv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_diffu_2d", "intz_diffu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_diffv_2d", "intz_diffv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_gKEu_2d", "intz_gKEu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_gKEv_2d", "intz_gKEv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_rvxu_2d", "intz_rvxu_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_rvxv_2d", "intz_rvxv_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_u_BT_accel_2d", "intz_u_BT_accel_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "intz_v_BT_accel_2d", "intz_v_BT_accel_2d", "ocean_monthly", "all", "mean", "none",1
+
+"ocean_model", "pbo", "pbo", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "taux", "taux", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "tauy", "tauy", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "taux_bot", "taux_bot", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "tauy_bot", "tauy_bot", "ocean_monthly", "all", "mean", "none",1
+
+"ocean_model", "wfo", "wfo", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "col_height",  "col_height",  "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "vmo_2d", "vmo_2d", "ocean_monthly", "all", "mean", "none",1
+"ocean_model", "umo_2d", "umo_2d", "ocean_monthly", "all", "mean", "none",1
+
+# ============= Static File ============================
+# CMIP6/OMIP Table G1: static information
+ "ocean_model", "areacello",   "areacello",   "ocean_static", "all", "none", "none", 1
+ "ocean_model", "deptho",      "deptho",      "ocean_static", "all", "none", "none", 1
+ "ocean_model", "hfgeou",      "hfgeou",      "ocean_static", "all", "none", "none", 1  # for static geothermal heat
+ "ocean_model", "sftof",       "sftof",       "ocean_static", "all", "none", "none", 1
+# Extra static geometry data beyond CMIP6/OMIP Table 2.1
+ "ocean_model", "Coriolis",    "Coriolis",    "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolon",      "geolon",      "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolat",      "geolat",      "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolon_c",    "geolon_c",    "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolat_c",    "geolat_c",    "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolon_u",    "geolon_u",    "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolat_u",    "geolat_u",    "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolon_v",    "geolon_v",    "ocean_static", "all", "none", "none", 1
+ "ocean_model", "geolat_v",    "geolat_v",    "ocean_static", "all", "none", "none", 1
+ "ocean_model", "wet",         "wet",         "ocean_static", "all", "none", "none", 1
+ "ocean_model", "wet_c",       "wet_c",       "ocean_static", "all", "none", "none", 1
+ "ocean_model", "wet_u",       "wet_u",       "ocean_static", "all", "none", "none", 1
+ "ocean_model", "wet_v",       "wet_v",       "ocean_static", "all", "none", "none", 1
+ "ocean_model", "dxt",         "dxt",         "ocean_static", "all", "none", "none", 1
+ "ocean_model", "dyt",         "dyt",         "ocean_static", "all", "none", "none", 1
+ "ocean_model", "dxCu",        "dxCu",        "ocean_static", "all", "none", "none", 1
+ "ocean_model", "dyCu",        "dyCu",        "ocean_static", "all", "none", "none", 1
+ "ocean_model", "dxCv",        "dxCv",        "ocean_static", "all", "none", "none", 1
+ "ocean_model", "dyCv",        "dyCv",        "ocean_static", "all", "none", "none", 1
+ "ocean_model", "areacello_cu","areacello_cu","ocean_static", "all", "none", "none", 1
+ "ocean_model", "areacello_cv","areacello_cv","ocean_static", "all", "none", "none", 1
+ "ocean_model", "areacello_bu","areacello_bu","ocean_static", "all", "none", "none", 1
+ "ocean_model", "empty_vol",   "empty_vol",   "ocean_static", "all", "none", "none", 1
