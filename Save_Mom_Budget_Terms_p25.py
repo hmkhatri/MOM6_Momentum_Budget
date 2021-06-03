@@ -53,7 +53,7 @@ path_grid = "/archive/Raphael.Dussin/FMS2019.01.03_devgfdl_20210308/CM4_piContro
 ds_grid = xr.open_dataset(path_grid + "ocean_monthly.static.nc")
 
 # Loop for reading data and saving 5-yr averages
-for i in range(0, 16):  #len(filelist)):
+for i in range(16, 30): #len(filelist)):
 
     tim_yr = filelist[i][-28:-15]
     print("Year Running = ", tim_yr)
